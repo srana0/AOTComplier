@@ -16,20 +16,6 @@ There is one row for each method that exists in the program. The reference is th
 
 In this assignment, you will add support for replacing a method invocation that jumps to the bytecode for method interpretation with a reference for a compiled method to perform the equivalent operation. There are a few enhancements you need to make to support this:
 
-1\. For each of the methods that are in the const\_pool you need to keep a counter.
-
-This counter will start at 0 and increment every time the method is invoked. Once
-
-it reaches a threshold then you are to check if a compiled version of the method
-
-exists. If so, then you are to make note of this in the const\_pool and from then on
-
-invoke the compiled method instead of the interpreted one.
-
-2\. An additional flag with argument -a numwill be provided on the command line
-
-where numis the threshold.
-
 * For each of the methods that are in the const_pool you need to keep a counter. This counter will start at 0 and increment every time the method is invoked. Once it reaches a threshold then you are to check if a compiled version of the method exists. If so, then you are to make note of this in the const_pool and from then on invoke the compiled method instead of the interpreted one.
 * An additional flag with argument -a num will be provided on the command line where num is the threshold.
 * The compiled methods will be provided in a previously compiled library that are specified on the command line as -l library where library is the filename of the library in the current directory.
