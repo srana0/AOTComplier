@@ -2,41 +2,15 @@
 <a name="br1"></a> 
 
 
-Your code is expected to be compiled and executed on a linux machine with a gcc compiler.
+Your code is expected to be compiled and executed on a linux machine with a gcc compiler. The standard configuration in our labs. Please ensure this is the case before you submit as
+the TA needs to be able to run your code and cannot do so if it is not in this environment. 
 
-The standard configuration in our labs. Please ensure this is the case before you submit as
-
-the TA needs to be able to run your code and cannot do so if it is not in this environment.
-
-For this assignment we are going back to our interpreter and will focus on ahead-of-time
-
-compilation. You will remember that const\_pool is a constant pool that contains a simple
-
+For this assignment we are going back to our interpreter and will focus on ahead-of-time compilation. You will remember that const\_pool is a constant pool that contains a simple
 table of methods that exist in the program. The construction of the table is as follows:
 
-Reference to method Number of args (8-
+|  Reference to method(32-bit hexadecimal number) | Number of args (8-bit hexadecimalnumber)  |  Bit encoding of arg types (8-bit hexadecimal number) |  Return value encoding (8-bit hexadecimal number) |  
+|---|---|---|---|
 
-(32-bit hexadecimal bit hexadecimal
-
-Bit encoding of arg
-
-types (8-bit
-
-hexadecimal
-
-number)
-
-Return value
-
-encoding (8-bit
-
-hexadecimal
-
-number)
-
-number)
-
-number)
 
 There is one row for each method that exists in the program. The reference is the address
 
