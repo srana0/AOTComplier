@@ -1,0 +1,35 @@
+This package is intended to agree on the input and output format, as well as to provide explanations on the assignment.
+Please find:
+1)
+constantpool1.vmclass - a binary file describing the constant pool for just one method that follows right after main
+
+Its contents are:
+First, for main,
+Address  Argument count     Argument types                Return type 
+1024     1                  0000 0000                     2
+         arg                (bitmask, left to right)      no return
+Then, for the second function (index 1 in the constant pool)                            
+Address  Argument count     Argument types                Return type 
+1038     1                  0000 0000                     0
+                            (bitmask, left to right)      an int
+
+Note everything is in big-endian... Similar to JVM
+Constant_pool_bytes.PNG shows the bytes.
+Constant_pool.PNG shows the structure in a hierarchical view.
+
+2)
+PrintThree.bvmclass - a binary file that contains bytecode for the two functions: main, and another one, that does the heavy lifting.
+
+Bytecode_bytes.PNG shows the file contents.
+
+The other two files, named after the functions they represent (Main.png and make thre.PNG)
+show exact interpretation of the bytecode.
+
+execution instructions:
+
+./a.out -e PrintThree.bvmclass -c PrintThree.constantpool 0
+
+Expected output:
+3
+
+PrintThree.java is something that roughly represents the program (except we work on a reduced bytecode)
