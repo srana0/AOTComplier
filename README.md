@@ -1,6 +1,6 @@
 # AOTComplier
 <a name="br1"></a> 
-#Problem Statement
+# Problem Statement
 
 Your code is expected to be compiled and executed on a linux machine with a gcc compiler. The standard configuration in our labs. Please ensure this is the case before you submit as
 the TA needs to be able to run your code and cannot do so if it is not in this environment. 
